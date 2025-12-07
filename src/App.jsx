@@ -3,6 +3,10 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';  
+import PortfolioPage from './pages/PortfolioPage';  
+import ServicesPage from './pages/ServicesPage';  
+import ContactPage from './pages/ContactPage';  
 import ScrollToTop from './components/utils/ScrollToTop';  
 
 function AppContent() {
@@ -16,11 +20,10 @@ function AppContent() {
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<HomePage />} />
-            {/* Placeholder route lain—tambahin kalau udah siap */}
-            {/* <Route path="/about" element={<AboutPage />} /> */}
-            {/* <Route path="/portfolio" element={<PortfolioPage />} /> */}
-            {/* <Route path="/services" element={<ServicesPage />} /> */}
-            {/* <Route path="/contact" element={<ContactPage />} /> */}
+            <Route path="/about" element={<AboutPage />} />  
+            <Route path="/portfolio" element={<PortfolioPage />} />  
+            <Route path="/services" element={<ServicesPage />} />  
+            <Route path="/contact" element={<ContactPage />} />  
           </Routes>
         </AnimatePresence>
       </main>
